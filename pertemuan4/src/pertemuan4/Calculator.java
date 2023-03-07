@@ -25,7 +25,11 @@ public class Calculator {
                 number2_empty = false;
             }
             if (!number1_empty && !number2_empty && !operator_empty) {
-                temp_hasil = calculateTwoNumbers(temp_number1, temp_number2, current_operator);
+                try {
+                    temp_hasil = calculateTwoNumbers(temp_number1, temp_number2, current_operator);
+                } catch (ArithmeticException e) {
+                    System.out.println(e.getMessage());
+                }
                 temp_number1 = temp_hasil;
                 number2_empty = true;
                 operator_empty = true;
@@ -44,6 +48,10 @@ public class Calculator {
                 result = a - b;
                 break;
             case "/":
+                if (b == 0) {
+                    System.out.println("Cannot Divide by zero");
+                    throw new ArithmeticException("dividing a number by 0 is not allowed in this program");
+                }
                 result = a / b;
                 break;
             case "*":
