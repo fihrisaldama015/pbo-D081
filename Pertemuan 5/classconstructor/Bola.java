@@ -18,6 +18,9 @@ public class Bola {
 
     public void ComputeAndSetVolume() {
         this.volume = this.phi * this.radius * this.radius * this.radius * 4 / 3;
+        System.out.println(
+                "volume = " + this.phi + " * " + this.radius + " * " + this.radius + " * " + this.radius + " * (4/3)");
+
     }
 
     public double GetVolume() {

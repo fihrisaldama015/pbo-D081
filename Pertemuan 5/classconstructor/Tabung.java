@@ -11,7 +11,7 @@ public class Tabung {
 
     public Tabung(double radius) {
         this.radius = radius;
-        this.tinggi = 1;
+        this.tinggi = radius;
     }
 
     public Tabung(double radius, double tinggi) {
@@ -29,6 +29,8 @@ public class Tabung {
 
     public void ComputeAndSetVolume() {
         this.volume = (this.phi * this.radius * this.radius) * this.tinggi;
+        System.out.println("volume = " + this.phi + " * " + this.radius + " * " + this.radius + " * " + this.tinggi);
+
     }
 
     public double GetVolume() {

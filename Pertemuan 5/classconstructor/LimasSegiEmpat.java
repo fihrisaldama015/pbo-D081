@@ -10,7 +10,7 @@ public class LimasSegiEmpat {
 
     public LimasSegiEmpat(double sisi) {
         this.sisi = sisi;
-        this.tinggi = 1;
+        this.tinggi = sisi;
     }
 
     public LimasSegiEmpat(double sisi, double tinggi) {
@@ -28,6 +28,8 @@ public class LimasSegiEmpat {
 
     public void ComputeAndSetVolume() {
         this.volume = this.sisi * this.sisi * this.tinggi / 3;
+        System.out.println("volume = " + this.sisi + " * " + this.sisi + " * " + this.tinggi + " / 3");
+
     }
 
     public double GetVolume() {

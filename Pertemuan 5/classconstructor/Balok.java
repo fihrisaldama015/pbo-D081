@@ -18,7 +18,7 @@ public class Balok {
     public Balok(double panjang, double lebar) {
         this.panjang = panjang;
         this.lebar = lebar;
-        this.tinggi = 1;
+        this.tinggi = lebar;
     }
 
     public Balok(double panjang, double lebar, double tinggi) {
@@ -41,6 +41,7 @@ public class Balok {
 
     public void ComputeAndSetVolume() {
         this.volume = this.panjang * this.lebar * this.tinggi;
+        System.out.println("volume = " + this.panjang + " * " + this.lebar + " * " + this.tinggi);
     }
 
     public double getVolume() {
