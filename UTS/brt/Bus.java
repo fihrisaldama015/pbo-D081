@@ -67,11 +67,14 @@ public class Bus {
     public void hentikanBus(Halte halte) {
         this.statusBerjalan = false;
         System.out.println("BUS sampai di HALTE "+this.halteTujuan);
-        for(int i = 0; i < this.jumlahPenumpang; i++){
+        int i = 0;
+        while(i < this.jumlahPenumpang){
             if(penumpang.get(i).getHalteTujuan().equals(halte.getNamaHalte())){
                 this.turunkanPenumpang();
                 halte.penumpangTurun(1);
                 penumpang.remove(i);
+            }else{
+                i++;
             }
         }   
     }

@@ -74,7 +74,6 @@ public class Main {
         // BUS dari GRESIK
         bus.hentikanBus(halte_gresik);
         bus.setHalte(halte_gresik);
-
         randomPenumpang = (int) (Math.random() * 10) + 1;
         halte_gresik.setPenumpang(randomPenumpang);
         halte_gresik.statusHalte();
